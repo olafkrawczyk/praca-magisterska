@@ -1,0 +1,71 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{graphicx}
+\usepackage{lscape}
+\title{Output tables for 1xN statistical comparisons.}
+\author{}
+\date{\today}
+\begin{document}
+\begin{landscape}
+\pagestyle{empty}
+\maketitle
+\thispagestyle{empty}
+
+\section{Average rankings of Friedman test}
+
+
+Average ranks obtained by each method in the Friedman test.
+
+\begin{table}[!htp]
+\centering
+\begin{tabular}{|c|c|}\hline
+Algorithm&Ranking\\\hline
+features&4.4194\\voting&3.2742\\bagging&4.8548\\svm-lin&4.5161\\svm-rbf&3.2258\\knn3&3.2258\\knn5&6.4032\\mlp&6.0806\\\hline\end{tabular}
+\caption{Average Rankings of the algorithms (Friedman)}
+\end{table}
+
+Friedman statistic (distributed according to chi-square with 7 degrees of freedom): 56.849462. \newline P-value computed by Friedman Test: 0.\newline
+
+Iman and Davenport statistic (distributed according to F-distribution with 7 and 210 degrees of freedom): 10.649255. \newline P-value computed by Iman and Daveport Test: 0.000000000019.\newline
+
+
+\newpage
+
+\section{Post hoc comparison (Friedman)}
+
+
+P-values obtained in by applying post hoc methods over the results of Friedman procedure.
+
+\begin{table}[!htp]
+\centering\footnotesize
+\begin{tabular}{cccc}
+$i$&algorithm&$z=(R_0 - R_i)/SE$&$p$\\
+\hline7&knn5&5.106987&0\\6&mlp&4.588511&0.000004\\5&bagging&2.618303&0.008837\\4&svm-lin&2.073903&0.038088\\3&features&1.918361&0.055065\\2&voting&0.077771&0.93801\\1&knn3&0&1\\\hline
+\end{tabular}
+\caption{Post Hoc comparison Table for $\alpha=0.05$ (FRIEDMAN)}
+\end{table}
+\newpage
+
+\section{Adjusted P-Values (Friedman)}
+
+
+Adjusted P-values obtained through the application of the post hoc methods (Friedman).
+
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{ccc}
+i&algorithm&unadjusted $p$\\
+\hline1&knn5&0\\2&mlp&0.000004\\3&bagging&0.008837\\4&svm-lin&0.038088\\5&features&0.055065\\6&voting&0.93801\\7&knn3&1\\\hline
+\end{tabular}
+\caption{Adjusted $p$-values (FRIEDMAN) (I)}
+\end{table}
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{ccc}
+i&algorithm&unadjusted $p$\\
+\hline1&knn5&0\\2&mlp&0.000004\\3&bagging&0.008837\\4&svm-lin&0.038088\\5&features&0.055065\\6&voting&0.93801\\7&knn3&1\\\hline
+\end{tabular}
+\caption{Adjusted $p$-values (FRIEDMAN) (II)}
+\end{table}
+
+\newpage
+\end{landscape}\end{document}

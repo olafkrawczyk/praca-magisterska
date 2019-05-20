@@ -1,0 +1,607 @@
+\documentclass[a4paper,10pt]{article}
+\title{Wilcoxon Signed Ranks test.}
+\date{\today}
+\author{KEEL non-parametric statistical module}
+\begin{document}
+
+\pagestyle{empty}
+\maketitle
+\thispagestyle{empty}
+
+
+
+\section{Detailed results for no-features}
+
+
+\subsection{Results}
+
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|c|c|}
+\hline
+ VS & $R^{+}$ & $R^{-}$ & Exact P-value & Asymptotic P-value \\ \hline 
+features & 194.0 & 271.0 & $\geq$ 0.2 & 1\\ \hline 
+voting & 152.0 & 313.0 & $\geq$ 0.2 & 1\\ \hline 
+bagging & 233.0 & 263.0 & $\geq$ 0.2 & 1\\ \hline 
+svm-lin & 280.0 & 216.0 & $\geq$ 0.2 & 0.524198\\ \hline 
+svm-rbf & 159.0 & 306.0 & $\geq$ 0.2 & 1\\ \hline 
+knn3 & 159.0 & 306.0 & $\geq$ 0.2 & 1\\ \hline 
+knn5 & 389.0 & 107.0 & 0.004752 & 0.005556\\ \hline 
+mlp & 360.0 & 105.0 & 0.007612 & 0.00847\\ \hline 
+
+\end{tabular}
+\caption{Results obtained by the Wilcoxon test for algorithm no-features}
+\end{table}
+
+\subsection{Confidence intervals for Median of diferences}
+
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|}
+\hline
+ $\alpha$=0.90 & Confidence interval & Exact confidence \\ \hline 
+features & [-0.003427 , 0.001041] & 0.90182\\ \hline 
+voting & [-0.018906 , 0] & 0.90182\\ \hline 
+bagging & [-0.01 , 0.007856] & 0.90182\\ \hline 
+svm-lin & [-0.01249 , 0.03584] & 0.90182\\ \hline 
+svm-rbf & [-0.025688 , 0.001238] & 0.90182\\ \hline 
+knn3 & [-0.025688 , 0.001238] & 0.90182\\ \hline 
+knn5 & [0.008587 , 0.036948] & 0.90182\\ \hline 
+mlp & [0.007629 , 0.035931] & 0.90182\\ \hline 
+
+\end{tabular}
+\caption{Confidence intervals for algorithm no-features ($\alpha$=0.90)}
+\end{table}
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|}
+\hline
+ $\alpha$=0.95 & Confidence interval & Exact confidence \\ \hline 
+features & [-0.003845 , 0.001525] & 0.9521\\ \hline 
+voting & [-0.021229 , 0.002776] & 0.9521\\ \hline 
+bagging & [-0.011777 , 0.009389] & 0.9521\\ \hline 
+svm-lin & [-0.015173 , 0.044271] & 0.9521\\ \hline 
+svm-rbf & [-0.027805 , 0.004204] & 0.9521\\ \hline 
+knn3 & [-0.027805 , 0.004204] & 0.9521\\ \hline 
+knn5 & [0.006451 , 0.039682] & 0.9521\\ \hline 
+mlp & [0.004637 , 0.039409] & 0.9521\\ \hline 
+
+\end{tabular}
+\caption{Confidence intervals for algorithm no-features ($\alpha$=0.95)}
+\end{table}
+
+ \clearpage 
+
+
+\section{Detailed results for features}
+
+
+\subsection{Results}
+
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|c|c|}
+\hline
+ VS & $R^{+}$ & $R^{-}$ & Exact P-value & Asymptotic P-value \\ \hline 
+no-features & 271.0 & 194.0 & $\geq$ 0.2 & 0.422457\\ \hline 
+voting & 162.0 & 303.0 & $\geq$ 0.2 & 1\\ \hline 
+bagging & 219.0 & 246.0 & $\geq$ 0.2 & 1\\ \hline 
+svm-lin & 280.0 & 216.0 & $\geq$ 0.2 & 0.524198\\ \hline 
+svm-rbf & 171.0 & 294.0 & $\geq$ 0.2 & 1\\ \hline 
+knn3 & 171.0 & 294.0 & $\geq$ 0.2 & 1\\ \hline 
+knn5 & 393.0 & 103.0 & 0.003598 & 0.004354\\ \hline 
+mlp & 374.0 & 122.0 & 0.012432 & 0.013176\\ \hline 
+
+\end{tabular}
+\caption{Results obtained by the Wilcoxon test for algorithm features}
+\end{table}
+
+\subsection{Confidence intervals for Median of diferences}
+
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|}
+\hline
+ $\alpha$=0.90 & Confidence interval & Exact confidence \\ \hline 
+no-features & [-0.001041 , 0.003427] & 0.90182\\ \hline 
+voting & [-0.019587 , 0.002341] & 0.90182\\ \hline 
+bagging & [-0.009995 , 0.007197] & 0.90182\\ \hline 
+svm-lin & [-0.012311 , 0.038649] & 0.90182\\ \hline 
+svm-rbf & [-0.025331 , 0.003499] & 0.90182\\ \hline 
+knn3 & [-0.025331 , 0.003499] & 0.90182\\ \hline 
+knn5 & [0.009214 , 0.037489] & 0.90182\\ \hline 
+mlp & [0.008169 , 0.037251] & 0.90182\\ \hline 
+
+\end{tabular}
+\caption{Confidence intervals for algorithm features ($\alpha$=0.90)}
+\end{table}
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|}
+\hline
+ $\alpha$=0.95 & Confidence interval & Exact confidence \\ \hline 
+no-features & [-0.001525 , 0.003845] & 0.9521\\ \hline 
+voting & [-0.021 , 0.003998] & 0.9521\\ \hline 
+bagging & [-0.011579 , 0.009372] & 0.9521\\ \hline 
+svm-lin & [-0.015417 , 0.045676] & 0.9521\\ \hline 
+svm-rbf & [-0.027915 , 0.005656] & 0.9521\\ \hline 
+knn3 & [-0.027915 , 0.005656] & 0.9521\\ \hline 
+knn5 & [0.006989 , 0.041708] & 0.9521\\ \hline 
+mlp & [0.004317 , 0.040127] & 0.9521\\ \hline 
+
+\end{tabular}
+\caption{Confidence intervals for algorithm features ($\alpha$=0.95)}
+\end{table}
+
+ \clearpage 
+
+
+\section{Detailed results for voting}
+
+
+\subsection{Results}
+
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|c|c|}
+\hline
+ VS & $R^{+}$ & $R^{-}$ & Exact P-value & Asymptotic P-value \\ \hline 
+no-features & 313.0 & 152.0 & 0.1004 & 0.095706\\ \hline 
+features & 303.0 & 162.0 & 0.15188 & 0.144193\\ \hline 
+bagging & 348.0 & 148.0 & 0.05024 & 0.048901\\ \hline 
+svm-lin & 379.0 & 117.0 & 0.009148 & 0.009968\\ \hline 
+svm-rbf & 195.0 & 270.0 & $\geq$ 0.2 & 1\\ \hline 
+knn3 & 195.0 & 270.0 & $\geq$ 0.2 & 1\\ \hline 
+knn5 & 482.0 & 14.0 & 1.0244E-7 & 0.000004\\ \hline 
+mlp & 490.0 & 6.0 & 1.3038E-8 & 0.000002\\ \hline 
+
+\end{tabular}
+\caption{Results obtained by the Wilcoxon test for algorithm voting}
+\end{table}
+
+\subsection{Confidence intervals for Median of diferences}
+
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|}
+\hline
+ $\alpha$=0.90 & Confidence interval & Exact confidence \\ \hline 
+no-features & [0 , 0.018906] & 0.90182\\ \hline 
+features & [-0.002341 , 0.019587] & 0.90182\\ \hline 
+bagging & [0.001961 , 0.023434] & 0.90182\\ \hline 
+svm-lin & [0.003494 , 0.038727] & 0.90182\\ \hline 
+svm-rbf & [-0.007311 , 0.002286] & 0.90182\\ \hline 
+knn3 & [-0.007311 , 0.002286] & 0.90182\\ \hline 
+knn5 & [0.022858 , 0.041694] & 0.90182\\ \hline 
+mlp & [0.022108 , 0.037243] & 0.90182\\ \hline 
+
+\end{tabular}
+\caption{Confidence intervals for algorithm voting ($\alpha$=0.90)}
+\end{table}
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|}
+\hline
+ $\alpha$=0.95 & Confidence interval & Exact confidence \\ \hline 
+no-features & [-0.002776 , 0.021229] & 0.9521\\ \hline 
+features & [-0.003998 , 0.021] & 0.9521\\ \hline 
+bagging & [-0.000258 , 0.026104] & 0.9521\\ \hline 
+svm-lin & [0.002014 , 0.049373] & 0.9521\\ \hline 
+svm-rbf & [-0.008866 , 0.003289] & 0.9521\\ \hline 
+knn3 & [-0.008866 , 0.003289] & 0.9521\\ \hline 
+knn5 & [0.021008 , 0.044465] & 0.9521\\ \hline 
+mlp & [0.020545 , 0.039383] & 0.9521\\ \hline 
+
+\end{tabular}
+\caption{Confidence intervals for algorithm voting ($\alpha$=0.95)}
+\end{table}
+
+ \clearpage 
+
+
+\section{Detailed results for bagging}
+
+
+\subsection{Results}
+
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|c|c|}
+\hline
+ VS & $R^{+}$ & $R^{-}$ & Exact P-value & Asymptotic P-value \\ \hline 
+no-features & 263.0 & 233.0 & $\geq$ 0.2 & 0.761321\\ \hline 
+features & 246.0 & 219.0 & $\geq$ 0.2 & 0.77338\\ \hline 
+voting & 148.0 & 348.0 & $\geq$ 0.2 & 1\\ \hline 
+svm-lin & 248.0 & 248.0 & $\geq$ 0.2 & 0.992182\\ \hline 
+svm-rbf & 139.0 & 357.0 & $\geq$ 0.2 & 1\\ \hline 
+knn3 & 139.0 & 357.0 & $\geq$ 0.2 & 1\\ \hline 
+knn5 & 383.0 & 113.0 & 0.007088 & 0.007923\\ \hline 
+mlp & 355.0 & 141.0 & 0.03558 & 0.03515\\ \hline 
+
+\end{tabular}
+\caption{Results obtained by the Wilcoxon test for algorithm bagging}
+\end{table}
+
+\subsection{Confidence intervals for Median of diferences}
+
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|}
+\hline
+ $\alpha$=0.90 & Confidence interval & Exact confidence \\ \hline 
+no-features & [-0.007856 , 0.01] & 0.90182\\ \hline 
+features & [-0.007197 , 0.009995] & 0.90182\\ \hline 
+voting & [-0.023434 , -0.001961] & 0.90182\\ \hline 
+svm-lin & [-0.016785 , 0.029622] & 0.90182\\ \hline 
+svm-rbf & [-0.027765 , -0.005666] & 0.90182\\ \hline 
+knn3 & [-0.027765 , -0.005666] & 0.90182\\ \hline 
+knn5 & [0.008017 , 0.036183] & 0.90182\\ \hline 
+mlp & [0.003571 , 0.032056] & 0.90182\\ \hline 
+
+\end{tabular}
+\caption{Confidence intervals for algorithm bagging ($\alpha$=0.90)}
+\end{table}
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|}
+\hline
+ $\alpha$=0.95 & Confidence interval & Exact confidence \\ \hline 
+no-features & [-0.009389 , 0.011777] & 0.9521\\ \hline 
+features & [-0.009372 , 0.011579] & 0.9521\\ \hline 
+voting & [-0.026104 , 0.000258] & 0.9521\\ \hline 
+svm-lin & [-0.019752 , 0.035137] & 0.9521\\ \hline 
+svm-rbf & [-0.03042 , -0.002545] & 0.9521\\ \hline 
+knn3 & [-0.03042 , -0.002545] & 0.9521\\ \hline 
+knn5 & [0.006602 , 0.038597] & 0.9521\\ \hline 
+mlp & [0.001184 , 0.03602] & 0.9521\\ \hline 
+
+\end{tabular}
+\caption{Confidence intervals for algorithm bagging ($\alpha$=0.95)}
+\end{table}
+
+ \clearpage 
+
+
+\section{Detailed results for svm-lin}
+
+
+\subsection{Results}
+
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|c|c|}
+\hline
+ VS & $R^{+}$ & $R^{-}$ & Exact P-value & Asymptotic P-value \\ \hline 
+no-features & 216.0 & 280.0 & $\geq$ 0.2 & 1\\ \hline 
+features & 216.0 & 280.0 & $\geq$ 0.2 & 1\\ \hline 
+voting & 117.0 & 379.0 & $\geq$ 0.2 & 1\\ \hline 
+bagging & 248.0 & 248.0 & $\geq$ 0.2 & 0.992182\\ \hline 
+svm-rbf & 88.5 & 376.5 & $\geq$ 0.2 & 1\\ \hline 
+knn3 & 88.5 & 376.5 & $\geq$ 0.2 & 1\\ \hline 
+knn5 & 316.0 & 180.0 & 0.18866 & 0.179478\\ \hline 
+mlp & 309.0 & 187.0 & $\geq$ 0.2 & 0.228131\\ \hline 
+
+\end{tabular}
+\caption{Results obtained by the Wilcoxon test for algorithm svm-lin}
+\end{table}
+
+\subsection{Confidence intervals for Median of diferences}
+
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|}
+\hline
+ $\alpha$=0.90 & Confidence interval & Exact confidence \\ \hline 
+no-features & [-0.03584 , 0.01249] & 0.90182\\ \hline 
+features & [-0.038649 , 0.012311] & 0.90182\\ \hline 
+voting & [-0.038727 , -0.003494] & 0.90182\\ \hline 
+bagging & [-0.029622 , 0.016785] & 0.90182\\ \hline 
+svm-rbf & [-0.045601 , -0.006963] & 0.90182\\ \hline 
+knn3 & [-0.045601 , -0.006963] & 0.90182\\ \hline 
+knn5 & [-0.012359 , 0.029786] & 0.90182\\ \hline 
+mlp & [-0.008037 , 0.02484] & 0.90182\\ \hline 
+
+\end{tabular}
+\caption{Confidence intervals for algorithm svm-lin ($\alpha$=0.90)}
+\end{table}
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|}
+\hline
+ $\alpha$=0.95 & Confidence interval & Exact confidence \\ \hline 
+no-features & [-0.044271 , 0.015173] & 0.9521\\ \hline 
+features & [-0.045676 , 0.015417] & 0.9521\\ \hline 
+voting & [-0.049373 , -0.002014] & 0.9521\\ \hline 
+bagging & [-0.035137 , 0.019752] & 0.9521\\ \hline 
+svm-rbf & [-0.048474 , -0.005111] & 0.9521\\ \hline 
+knn3 & [-0.048474 , -0.005111] & 0.9521\\ \hline 
+knn5 & [-0.029511 , 0.032364] & 0.9521\\ \hline 
+mlp & [-0.014593 , 0.026545] & 0.9521\\ \hline 
+
+\end{tabular}
+\caption{Confidence intervals for algorithm svm-lin ($\alpha$=0.95)}
+\end{table}
+
+ \clearpage 
+
+
+\section{Detailed results for svm-rbf}
+
+
+\subsection{Results}
+
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|c|c|}
+\hline
+ VS & $R^{+}$ & $R^{-}$ & Exact P-value & Asymptotic P-value \\ \hline 
+no-features & 306.0 & 159.0 & 0.13474 & 0.127995\\ \hline 
+features & 294.0 & 171.0 & $\geq$ 0.2 & 0.202225\\ \hline 
+voting & 270.0 & 195.0 & $\geq$ 0.2 & 0.434452\\ \hline 
+bagging & 357.0 & 139.0 & 0.03212 & 0.031887\\ \hline 
+svm-lin & 376.5 & 88.5 & 0.0022779999999999996 & 0.002957\\ \hline 
+knn3 & 232.5 & 232.5 & $\geq$ 0.2 & 0.991795\\ \hline 
+knn5 & 457.0 & 39.0 & 7.006E-6 & 0.00004\\ \hline 
+mlp & 472.0 & 24.0 & 7.096E-7 & 0.000011\\ \hline 
+
+\end{tabular}
+\caption{Results obtained by the Wilcoxon test for algorithm svm-rbf}
+\end{table}
+
+\subsection{Confidence intervals for Median of diferences}
+
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|}
+\hline
+ $\alpha$=0.90 & Confidence interval & Exact confidence \\ \hline 
+no-features & [-0.001238 , 0.025688] & 0.90182\\ \hline 
+features & [-0.003499 , 0.025331] & 0.90182\\ \hline 
+voting & [-0.002286 , 0.007311] & 0.90182\\ \hline 
+bagging & [0.005666 , 0.027765] & 0.90182\\ \hline 
+svm-lin & [0.006963 , 0.045601] & 0.90182\\ \hline 
+knn3 & [0 , 0] & 0.90182\\ \hline 
+knn5 & [0.02428 , 0.049381] & 0.90182\\ \hline 
+mlp & [0.024474 , 0.04485] & 0.90182\\ \hline 
+
+\end{tabular}
+\caption{Confidence intervals for algorithm svm-rbf ($\alpha$=0.90)}
+\end{table}
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|}
+\hline
+ $\alpha$=0.95 & Confidence interval & Exact confidence \\ \hline 
+no-features & [-0.004204 , 0.027805] & 0.9521\\ \hline 
+features & [-0.005656 , 0.027915] & 0.9521\\ \hline 
+voting & [-0.003289 , 0.008866] & 0.9521\\ \hline 
+bagging & [0.002545 , 0.03042] & 0.9521\\ \hline 
+svm-lin & [0.005111 , 0.048474] & 0.9521\\ \hline 
+knn3 & [0 , 0] & 0.9521\\ \hline 
+knn5 & [0.021493 , 0.0517] & 0.9521\\ \hline 
+mlp & [0.021698 , 0.046523] & 0.9521\\ \hline 
+
+\end{tabular}
+\caption{Confidence intervals for algorithm svm-rbf ($\alpha$=0.95)}
+\end{table}
+
+ \clearpage 
+
+
+\section{Detailed results for knn3}
+
+
+\subsection{Results}
+
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|c|c|}
+\hline
+ VS & $R^{+}$ & $R^{-}$ & Exact P-value & Asymptotic P-value \\ \hline 
+no-features & 306.0 & 159.0 & 0.13474 & 0.127995\\ \hline 
+features & 294.0 & 171.0 & $\geq$ 0.2 & 0.202225\\ \hline 
+voting & 270.0 & 195.0 & $\geq$ 0.2 & 0.434452\\ \hline 
+bagging & 357.0 & 139.0 & 0.03212 & 0.031887\\ \hline 
+svm-lin & 376.5 & 88.5 & 0.0022779999999999996 & 0.002957\\ \hline 
+svm-rbf & 232.5 & 232.5 & $\geq$ 0.2 & 0.991795\\ \hline 
+knn5 & 457.0 & 39.0 & 7.006E-6 & 0.00004\\ \hline 
+mlp & 472.0 & 24.0 & 7.096E-7 & 0.000011\\ \hline 
+
+\end{tabular}
+\caption{Results obtained by the Wilcoxon test for algorithm knn3}
+\end{table}
+
+\subsection{Confidence intervals for Median of diferences}
+
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|}
+\hline
+ $\alpha$=0.90 & Confidence interval & Exact confidence \\ \hline 
+no-features & [-0.001238 , 0.025688] & 0.90182\\ \hline 
+features & [-0.003499 , 0.025331] & 0.90182\\ \hline 
+voting & [-0.002286 , 0.007311] & 0.90182\\ \hline 
+bagging & [0.005666 , 0.027765] & 0.90182\\ \hline 
+svm-lin & [0.006963 , 0.045601] & 0.90182\\ \hline 
+svm-rbf & [0 , 0] & 0.90182\\ \hline 
+knn5 & [0.02428 , 0.049381] & 0.90182\\ \hline 
+mlp & [0.024474 , 0.04485] & 0.90182\\ \hline 
+
+\end{tabular}
+\caption{Confidence intervals for algorithm knn3 ($\alpha$=0.90)}
+\end{table}
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|}
+\hline
+ $\alpha$=0.95 & Confidence interval & Exact confidence \\ \hline 
+no-features & [-0.004204 , 0.027805] & 0.9521\\ \hline 
+features & [-0.005656 , 0.027915] & 0.9521\\ \hline 
+voting & [-0.003289 , 0.008866] & 0.9521\\ \hline 
+bagging & [0.002545 , 0.03042] & 0.9521\\ \hline 
+svm-lin & [0.005111 , 0.048474] & 0.9521\\ \hline 
+svm-rbf & [0 , 0] & 0.9521\\ \hline 
+knn5 & [0.021493 , 0.0517] & 0.9521\\ \hline 
+mlp & [0.021698 , 0.046523] & 0.9521\\ \hline 
+
+\end{tabular}
+\caption{Confidence intervals for algorithm knn3 ($\alpha$=0.95)}
+\end{table}
+
+ \clearpage 
+
+
+\section{Detailed results for knn5}
+
+
+\subsection{Results}
+
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|c|c|}
+\hline
+ VS & $R^{+}$ & $R^{-}$ & Exact P-value & Asymptotic P-value \\ \hline 
+no-features & 107.0 & 389.0 & $\geq$ 0.2 & 1\\ \hline 
+features & 103.0 & 393.0 & $\geq$ 0.2 & 1\\ \hline 
+voting & 14.0 & 482.0 & $\geq$ 0.2 & 1\\ \hline 
+bagging & 113.0 & 383.0 & $\geq$ 0.2 & 1\\ \hline 
+svm-lin & 180.0 & 316.0 & $\geq$ 0.2 & 1\\ \hline 
+svm-rbf & 39.0 & 457.0 & $\geq$ 0.2 & 1\\ \hline 
+knn3 & 39.0 & 457.0 & $\geq$ 0.2 & 1\\ \hline 
+mlp & 167.0 & 298.0 & $\geq$ 0.2 & 1\\ \hline 
+
+\end{tabular}
+\caption{Results obtained by the Wilcoxon test for algorithm knn5}
+\end{table}
+
+\subsection{Confidence intervals for Median of diferences}
+
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|}
+\hline
+ $\alpha$=0.90 & Confidence interval & Exact confidence \\ \hline 
+no-features & [-0.036948 , -0.008587] & 0.90182\\ \hline 
+features & [-0.037489 , -0.009214] & 0.90182\\ \hline 
+voting & [-0.041694 , -0.022858] & 0.90182\\ \hline 
+bagging & [-0.036183 , -0.008017] & 0.90182\\ \hline 
+svm-lin & [-0.029786 , 0.012359] & 0.90182\\ \hline 
+svm-rbf & [-0.049381 , -0.02428] & 0.90182\\ \hline 
+knn3 & [-0.049381 , -0.02428] & 0.90182\\ \hline 
+mlp & [-0.01 , 0.000999] & 0.90182\\ \hline 
+
+\end{tabular}
+\caption{Confidence intervals for algorithm knn5 ($\alpha$=0.90)}
+\end{table}
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|}
+\hline
+ $\alpha$=0.95 & Confidence interval & Exact confidence \\ \hline 
+no-features & [-0.039682 , -0.006451] & 0.9521\\ \hline 
+features & [-0.041708 , -0.006989] & 0.9521\\ \hline 
+voting & [-0.044465 , -0.021008] & 0.9521\\ \hline 
+bagging & [-0.038597 , -0.006602] & 0.9521\\ \hline 
+svm-lin & [-0.032364 , 0.029511] & 0.9521\\ \hline 
+svm-rbf & [-0.0517 , -0.021493] & 0.9521\\ \hline 
+knn3 & [-0.0517 , -0.021493] & 0.9521\\ \hline 
+mlp & [-0.011054 , 0.002555] & 0.9521\\ \hline 
+
+\end{tabular}
+\caption{Confidence intervals for algorithm knn5 ($\alpha$=0.95)}
+\end{table}
+
+ \clearpage 
+
+
+\section{Detailed results for mlp}
+
+
+\subsection{Results}
+
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|c|c|}
+\hline
+ VS & $R^{+}$ & $R^{-}$ & Exact P-value & Asymptotic P-value \\ \hline 
+no-features & 105.0 & 360.0 & $\geq$ 0.2 & 1\\ \hline 
+features & 122.0 & 374.0 & $\geq$ 0.2 & 1\\ \hline 
+voting & 6.0 & 490.0 & $\geq$ 0.2 & 1\\ \hline 
+bagging & 141.0 & 355.0 & $\geq$ 0.2 & 1\\ \hline 
+svm-lin & 187.0 & 309.0 & $\geq$ 0.2 & 1\\ \hline 
+svm-rbf & 24.0 & 472.0 & $\geq$ 0.2 & 1\\ \hline 
+knn3 & 24.0 & 472.0 & $\geq$ 0.2 & 1\\ \hline 
+knn5 & 298.0 & 167.0 & 0.18396 & 0.174619\\ \hline 
+
+\end{tabular}
+\caption{Results obtained by the Wilcoxon test for algorithm mlp}
+\end{table}
+
+\subsection{Confidence intervals for Median of diferences}
+
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|}
+\hline
+ $\alpha$=0.90 & Confidence interval & Exact confidence \\ \hline 
+no-features & [-0.035931 , -0.007629] & 0.90182\\ \hline 
+features & [-0.037251 , -0.008169] & 0.90182\\ \hline 
+voting & [-0.037243 , -0.022108] & 0.90182\\ \hline 
+bagging & [-0.032056 , -0.003571] & 0.90182\\ \hline 
+svm-lin & [-0.02484 , 0.008037] & 0.90182\\ \hline 
+svm-rbf & [-0.04485 , -0.024474] & 0.90182\\ \hline 
+knn3 & [-0.04485 , -0.024474] & 0.90182\\ \hline 
+knn5 & [-0.000999 , 0.01] & 0.90182\\ \hline 
+
+\end{tabular}
+\caption{Confidence intervals for algorithm mlp ($\alpha$=0.90)}
+\end{table}
+\begin{table}[!htp]
+\centering\small
+\begin{tabular}{
+|c|c|c|}
+\hline
+ $\alpha$=0.95 & Confidence interval & Exact confidence \\ \hline 
+no-features & [-0.039409 , -0.004637] & 0.9521\\ \hline 
+features & [-0.040127 , -0.004317] & 0.9521\\ \hline 
+voting & [-0.039383 , -0.020545] & 0.9521\\ \hline 
+bagging & [-0.03602 , -0.001184] & 0.9521\\ \hline 
+svm-lin & [-0.026545 , 0.014593] & 0.9521\\ \hline 
+svm-rbf & [-0.046523 , -0.021698] & 0.9521\\ \hline 
+knn3 & [-0.046523 , -0.021698] & 0.9521\\ \hline 
+knn5 & [-0.002555 , 0.011054] & 0.9521\\ \hline 
+
+\end{tabular}
+\caption{Confidence intervals for algorithm mlp ($\alpha$=0.95)}
+\end{table}
+
+ \clearpage 
+
+
+\end{document}

@@ -1,0 +1,117 @@
+\documentclass[a4paper,10pt]{article}
+\title{Wilcoxon Signed Ranks test.}
+\usepackage{rotating}
+\usepackage{textcomp}
+\date{\today}
+\author{KEEL non-parametric statistical module}
+\begin{document}
+
+\pagestyle{empty}
+\maketitle
+\thispagestyle{empty}
+
+
+\begin{sidewaystable}[!htp]
+\centering\scriptsize
+\resizebox{\textwidth}{!}{\begin{tabular}{
+|c|r|r|r|r|r|r|r|r|r|}
+\hline
+&(1) &(2) &(3) &(4) &(5) &(6) &(7) &(8) &(9) \\
+\hline
+no-features (1)& -& 194.0& 152.0& 233.0& 280.0& 159.0& 159.0& 389.0& 360.0\\
+\hline
+features (2)& 271.0& -& 162.0& 219.0& 280.0& 171.0& 171.0& 393.0& 374.0\\
+\hline
+voting (3)& 313.0& 303.0& -& 348.0& 379.0& 195.0& 195.0& 482.0& 490.0\\
+\hline
+bagging (4)& 263.0& 246.0& 148.0& -& 248.0& 139.0& 139.0& 383.0& 355.0\\
+\hline
+svm-lin (5)& 216.0& 216.0& 117.0& 248.0& -& 88.5& 88.5& 316.0& 309.0\\
+\hline
+svm-rbf (6)& 306.0& 294.0& 270.0& 357.0& 376.5& -& 232.5& 457.0& 472.0\\
+\hline
+knn3 (7)& 306.0& 294.0& 270.0& 357.0& 376.5& 232.5& -& 457.0& 472.0\\
+\hline
+knn5 (8)& 107.0& 103.0& 14.0& 113.0& 180.0& 39.0& 39.0& -& 167.0\\
+\hline
+mlp (9)& 105.0& 122.0& 6.0& 141.0& 187.0& 24.0& 24.0& 298.0& -\\
+\hline
+
+\end{tabular}}
+\caption{Ranks computed by the Wilcoxon test}
+
+\end{sidewaystable}
+
+ \clearpage 
+
+
+\begin{sidewaystable}[!htp]
+\centering\scriptsize
+\resizebox{\textwidth}{!}{\begin{tabular}{
+|c|c|c|c|c|c|c|c|c|c|}
+\hline
+&(1) &(2) &(3) &(4) &(5) &(6) &(7) &(8) &(9) \\
+\hline
+no-features (1)& -&  &  &  &  &  &  & \textbullet & \textbullet \\
+\hline
+features (2)&  & -&  &  &  &  &  & \textbullet & \textbullet \\
+\hline
+voting (3)&  &  & -& \textbullet & \textbullet &  &  & \textbullet & \textbullet \\
+\hline
+bagging (4)&  &  &  & -&  & \textopenbullet & \textopenbullet & \textbullet & \textbullet \\
+\hline
+svm-lin (5)&  &  & \textopenbullet &  & -& \textopenbullet & \textopenbullet &  &  \\
+\hline
+svm-rbf (6)&  &  &  & \textbullet & \textbullet & -&  & \textbullet & \textbullet \\
+\hline
+knn3 (7)&  &  &  & \textbullet & \textbullet &  & -& \textbullet & \textbullet \\
+\hline
+knn5 (8)& \textopenbullet & \textopenbullet & \textopenbullet & \textopenbullet &  & \textopenbullet & \textopenbullet & -&  \\
+\hline
+mlp (9)& \textopenbullet & \textopenbullet & \textopenbullet & \textopenbullet &  & \textopenbullet & \textopenbullet &  & -\\
+\hline
+
+\end{tabular}}
+\caption{Summary of the Wilcoxon test. \textbullet = the method in the row improves the method of the column. \textopenbullet = the method in the column improves the method of the row. Upper diagonal of level significance $\alpha=0.9$,Lower diagonal level of significance $\alpha=0.95$}
+
+\end{sidewaystable}
+
+ \clearpage 
+
+
+\begin{table}[!htp]
+\centering\scriptsize
+\begin{tabular}{
+|c|c|c|c|c|}
+\hline
+&\multicolumn{2}{c|}{$\alpha=0.9$} & \multicolumn{2}{c|}{$\alpha=0.95$}\\\hline
+Method & + & $\pm$ & + & $\pm$ \\
+\hline
+no-features & 2 & 8 & 2 & 8\\
+\hline
+features & 2 & 8 & 2 & 8\\
+\hline
+voting & 4 & 8 & 3 & 8\\
+\hline
+bagging & 2 & 5 & 2 & 6\\
+\hline
+svm-lin & 0 & 5 & 0 & 5\\
+\hline
+svm-rbf & 4 & 8 & 4 & 8\\
+\hline
+knn3 & 4 & 8 & 4 & 8\\
+\hline
+knn5 & 0 & 2 & 0 & 2\\
+\hline
+mlp & 0 & 2 & 0 & 2\\
+\hline
+
+\end{tabular}
+\caption{Wilcoxon test summary results}
+
+\end{table}
+
+ \clearpage 
+
+
+\end{document}
